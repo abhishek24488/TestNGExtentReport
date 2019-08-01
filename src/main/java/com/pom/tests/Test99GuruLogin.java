@@ -12,9 +12,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.test.report.ExtentTestManager;
+
 import com.tests.pages.Guru99HomePage;
 import com.tests.pages.Guru99Login;
+import com.utils.listener.Retry;
 
 public class Test99GuruLogin {
 	public WebDriver driver;
@@ -50,12 +51,11 @@ public class Test99GuruLogin {
 	 * 
 	 */
 
-	@Test(priority = 1)
+	@Test(priority = 1 , retryAnalyzer = Retry.class)
 	public void test_Home_Page_Appear_Correct(Method method) {
 
 		// Create Login Page object
-		ExtentTestManager.startTest(method.getName(), "Invalid Login Scenario with empty username and password.");
-
+		
 		objLogin = new Guru99Login(driver);
 
 		// Verify login page title
@@ -66,7 +66,7 @@ public class Test99GuruLogin {
 
 		// login to application
 
-		objLogin.loginToGuru99("mgr123", "mgr!23");
+		objLogin.loginToGuru99("mgr1234", "mgr!23");
 
 		// go the next page
 

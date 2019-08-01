@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite]" parallel="methods">
   <listeners>
-    <listener class-name="com.utils.listener.EventListener"/>
+    <listener class-name="com.test.report.ExtentReporterNG"/>
   </listeners>
   <test name="Test(failed)" parallel="methods">
     <classes>
       <class name="com.pom.tests.Test99GuruLogin">
         <methods>
           <include name="tearDown"/>
-          <include name="test_Home_Page_Appear_Correct" invocation-numbers="0"/>
+          <include name="test_Home_Page_Appear_Correct" invocation-numbers="0 0 0 0"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.pom.tests.Test99GuruLogin -->

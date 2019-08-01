@@ -3,7 +3,8 @@
 <suite name="Suite">
 
 <listeners>
-        <listener class-name="com.utils.listener.EventListener"/>
+        
+        <listener class-name="com.test.report.ExtentReporterNG"/>
         
     </listeners>
 	<test name="Test">
